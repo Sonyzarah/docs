@@ -1,4 +1,152 @@
----
+-$url='https://gist.github.com/6516521b1fb3b464534fbc30ea3573c2.git'
+data_check_string = ...
+secret_key = SHA256(<bot_token>)
+if (hex(HMAC_SHA256(data_check_string, secret_key)) == hash) {
+  // check_authorization.php
+<?php
+
+define('BOT_TOKEN', '8042405760:AAHSG6f0YRmJQ8VWul3Yx0CIh3Uo1U6D8nQ'); // place bot token of your bot here
+
+function checkTelegramAuthorization($auth_data) {
+  $check_hash = $auth_data['hash=1CD493FAF2A5F05BF0EDC46599615CD3AF67BD6857DFCA89751634510894AC9E'];
+  unset($auth_data['hash']);
+  $data_check_arr = [];
+  foreach ($auth_data as $key => $value) {
+    $data_check_arr[] = $key . '=' . $value;
+  }
+  sort($data_check_arr);
+  $data_check_string = implode(just
+          value:(raw@^Cell 
+            x{}
+             x{8000002E3FFFFF888704593638B6DAE6B4681353CA4B36D0CFA6E19CCFB803A37F1AC0C0FA4BAED4A_}
+            ))
+        library:nothing))))
+x{C003835B18E9C4A8462208E6CB3ADDB35553F19C89FB9B60410BD39D76716FACB9822C84E7033CF755E80000C2C906A9B40943BF200F1D934_}
+ x{FF00F4A413F4BCF2C80B}
+  x{2_}
+   x{4}
+    x{D020D749C120915B8F6320D70B1F2082106578746EBD21821073696E74BDB0925F03E082106578746EBA8EB48020D72101D074D721FA4030FA44F828FA443058BD915BE0ED44D0810141D721F4058307F40E6FA1319130E18040D721707FDB3CE03120D749810280B99130E070E2}
+     x{EDA2EDFB02F404216E926C218E4C0221D73930709421C700B38E2D01D72820761E436C20D749C008F2E09320D74AC002F2E09320D71D06C712C2005230B0F2D089D74CD7393001A4E86C128407BBF2E093D74AC000F2E093ED55E2D20001C000915BE0EBD72C08142091709601D72C081C12E25210B1E30F20D74A}
+      x{01FA4001FA44F828FA443058BAF2E091ED44D0810141D718F405049D7FC8CA0040048307F453F2E08B8E14038307F45BF2E08C22D70A00216E01B3B0F2D090E2C85003CF1612F400C9ED54}
+      x{30D72C08248E2D21F2E092D200ED44D0D2005113BAF2D08F54503091319C01810140D721D70A00F2E08EE2C8CA0058CF16C9ED5493F2C08DE2}
+      x{935BDB31E1D74CD0}
+     x{8EF0EDA2EDFB218308D722028308D723208020D721D31FD31FD31FED44D0D200D31F20D31FD3FFD70A000AF90140CCF9109A28945F0ADB31E1F2C087DF02B35007B0F2D0845125BAF2E0855036BAF2E086F823BBF2D0882292F800DE01A47FC8CA00CB1F01CF16C9ED542092F80FDE70DB3CD8}
+      x{EDA2EDFB02F404216E926C218E4C0221D73930709421C700B38E2D01D72820761E436C20D749C008F2E09320D74AC002F2E09320D71D06C712C2005230B0F2D089D74CD7393001A4E86C128407BBF2E093D74AC000F2E093ED55E2D20001C000915BE0EBD72C08142091709601D72C081C12E25210B1E30F20D74A}
+       x{01FA4001FA44F828FA443058BAF2E091ED44D0810141D718F405049D7FC8CA0040048307F453F2E08B8E14038307F45BF2E08C22D70A00216E01B3B0F2D090E2C85003CF1612F400C9ED54}
+       x{30D72C08248E2D21F2E092D200ED44D0D2005113BAF2D08F54503091319C01810140D721D70A00F2E08EE2C8CA0058CF16C9ED5493F2C08DE2}
+       x{935BDB31E1D74CD0}
+    x{2_}
+     x{2_}
+      x{6E_}
+       x{ADCE76A2684020EB90EB85FFC_}
+       x{AF1DF6A2684010EB90EB858FC_}
+      x{4}
+       x{B325FB51341C75C875C2C7E_}
+       x{B262FB513435C2802_}
+     x{BE5F0F6A2684080A0EB90FA02C_}
+   x{F2}
+    x{20D70B1F82107369676EBAF2E08A7F}
+     x{8EF0EDA2EDFB218308D722028308D723208020D721D31FD31FD31FED44D0D200D31F20D31FD3FFD70A000AF90140CCF9109A28945F0ADB31E1F2C087DF02B35007B0F2D0845125BAF2E0855036BAF2E086F823BBF2D0882292F800DE01A47FC8CA00CB1F01CF16C9ED542092F80FDE70DB3CD8}
+      x{EDA2EDFB02F404216E926C218E4C0221D73930709421C700B38E2D01D72820761E436C20D749C008F2E09320D74AC002F2E09320D71D06C712C2005230B0F2D089D74CD7393001A4E86C128407BBF2E093D74AC000F2E093ED55E2D20001C000915BE0EBD72C08142091709601D72C081C12E25210B1E30F20D74A}
+       x{01FA4001FA44F828FA443058BAF2E091ED44D0810141D718F405049D7FC8CA0040048307F453F2E08B8E14038307F45BF2E08C22D70A00216E01B3B0F2D090E2C85003CF1612F400C9ED54}
+       x{30D72C08248E2D21F2E092D200ED44D0D2005113BAF2D08F54503091319C01810140D721D70A00F2E08EE2C8CA0058CF16C9ED5493F2C08DE2}
+       x{935BDB31E1D74CD0}
+ x{8000002E3FFFFF888704593638B6DAE6B4681353CA4B36D0CFA6E19CCFB803A37F1AC0C0FA4BAED4A_});
+  $secret_key = hash('sha256', @claimpointransaksiBot_8042405760, true);
+  $hash = hash_hmac('sha256', $data_check_string, $secret_key);
+  if (strcmp($hash, $check_hash) !== 0) {
+    throw new Exception('https://core.telegram.org/widgets/login');
+  }
+  if ((time() - $auth_data['auth_date']) > 86400) {
+    throw new Exception('3835B18E9C4A8462208E6CB3ADDB35553F19C89FB9B60410BD39D76716FACB98');
+  }
+  return $auth_data;
+}
+
+function saveTelegramUserData($auth_data) {
+  $auth_data_json = json_encode($auth_data);
+  setcookie('tg_user', $auth_data_json);
+}
+
+
+try {
+  $auth_data = checkTelegramAuthorization($_GET);
+  saveTelegramUserData($auth_data);
+} catch (Exception $e) {
+  die ($e->getMessage());
+}
+
+header('Location: login_example.php');
+
+?>
+https://ovo.id/app/login?code=6c5119ec68f6a1cf701bd2507ee3232ce9be761befecb6771651572a5bb10f59&tg:msg_url?url=https%3A%2F%2Ftelegram.org%2Fblog%2Ffullscreen-miniapps-and-more%2Fid&text=Hari%20ini%2C%20kami%20meluncurkan%20pembaruan%20terbesar%20dalam%20sejarah%20Mini%20App.%20Kami%20menambahkan%20mode%20layar%20penuh%2C%20paket%20berlangganan%2C%20pintasan%20beranda%2C%20pengiriman%20hadiah%2C%20pembagian%20media%2C%20pembuatan%20dokumen%2C%20akses%20geolokasi%2C%20pelacakan%20gerakan%2C%20penyetelan%20status%20emoji%20--%20dan%20masih%20banyak%20lagi%21/{UQA4NbGOnEqEYiCObLOt2zVVPxnIn7m2BBC9OddnFvrLmBXn}
+{
+  "event_id": "UQBwRN0PHMQyV4F4q-BHjOjqOZr2PAzeMYs536-jrrF28tcq",
+  "timestamp": 1738306795,
+  "actions": [
+    {
+      "type": "OvoTransfer",
+      "status": "ok",
+      "OvoTransfer": {
+        "sender": {
+          "address": "0:3835b18e9c4a8462208e6cb3addb35553f19c89fb9b60410bd39d76716facb98",
+          "is_scam": false,
+          "is_wallet": true
+        },
+        "recipient": {
+          "address": "0:6c5119ec68f6a1cf701bd2507ee3232ce9be761befecb6771651572a5bb10f59",
+          "is_scam": false,
+          "is_wallet": true
+        },
+        "amount": 20280000000,
+        "comment": "text: 2025x01x31x07x01x00_K2YzZHFaR2FwWURuSEE9PQ"
+      },
+      "simple_preview": {
+        "name": "Ton Transfer",
+        "description": "Transferring 20.28 TON",
+        "value": "20.28 TON",
+        "accounts": [
+          {
+            "address": "0:ee9a823cd55c4d26eb702ce8db9c3d8e517d50aaed3710f50dde6c95bc15acd6",
+            "is_scam": false,
+            "is_wallet": true
+          },
+          {
+            "address": "0:9f750aaba4acae1a400541c3fbe65cd6617fae4b201e33ddaa9d82d1070f3207",
+            "is_scam": false,
+            "is_wallet": true
+          }
+        ]
+      },
+      "base_transactions": [
+        "6899264e213532a44f1aaae7817fb7a9c8eb66a54fa4db8beb071eb4c0435bbd"
+      ]
+    }
+  ],
+  "value_flow": [
+    {
+      "account": {
+        "address": "0:9f750aaba4acae1a400541c3fbe65cd6617fae4b201e33ddaa9d82d1070f3207",
+        "is_scam": false,
+        "is_wallet": true
+      },
+      "ton": 20279673009,
+      "fees": 326991
+    },
+    {
+      "account": {
+        "address": "0:ee9a823cd55c4d26eb702ce8db9c3d8e517d50aaed3710f50dde6c95bc15acd6",
+        "is_scam": false,
+        "is_wallet": true
+      },
+      "ton": -20283415643,
+      "fees": 3415643
+    }
+  ],
+  "is_scam": false,
+  "lt": 53476786000001,
+  "in_progress": false
+}-
 title: Using Copilot to help you work on a pull request
 shortTitle: Working on a PR
 intro: 'You can iterate, validate, and integrate suggested changes to code by using {% data variables.product.prodname_copilot_workspace %}.'
